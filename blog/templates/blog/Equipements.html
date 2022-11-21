@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {for equipement in Equipements}
+        <div class ="equipement">
+            {{equipement.id_equip}}
+            {{equipement.disponibilite}}
+        </div>
+    {% endfor %}
+{% endblock %}

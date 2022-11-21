@@ -1,0 +1,51 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for animal in Animaux %}
+        {% if animal.id_animal == "Tic" %}
+        <div class = "animal">
+            <a href="{% url 'Tic' %}">{{animal.id_animal}}</a>
+            {{animal.etat}}
+            {{animal.type}}
+            {{animal.race}}
+            {{animal.lieu}}
+        </div>
+        {% endif %}
+        {% if animal.id_animal == "Pocahontas" %}
+        <div class = "animal">
+            <a href="{% url 'Pocahontas' %}">{{animal.id_animal}}</a>
+            {{animal.etat}}
+            {{animal.type}}
+            {{animal.race}}
+            {{animal.lieu}}
+        </div>
+        {% endif %}
+        {% if animal.id_animal == "Totora" %}
+        <div class = "animal">
+            <a href="{% url 'Totora' %}">{{animal.id_animal}}</a>
+            {{animal.etat}}
+            {{animal.type}}
+            {{animal.race}}
+            {{animal.lieu}}
+        </div>
+        {% endif %}
+        {% if animal.id_animal == "Patrick" %}
+        <div class = "Patrick">
+            <a href="{% url 'Patrick' %}">{{animal.id_animal}}</a>
+            {{animal.etat}}
+            {{animal.type}}
+            {{animal.race}}
+            {{animal.lieu}}
+        </div>
+        {% endif %}
+        {% if animal.id_animal == "Tac" %}
+        <div class = "animal">
+            <a href="{% url 'Tac' %}">{{animal.id_animal}}</a>
+            {{animal.etat}}
+            {{animal.type}}
+            {{animal.race}}
+            {{animal.lieu}}
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
